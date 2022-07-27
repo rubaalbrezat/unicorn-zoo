@@ -39,6 +39,8 @@ class Main extends React.Component{
         return(
             <>
          <HornedBeast imga={arr[0].image_url} title={arr[0].title} alt={arr[0].description} />
+         <HornedBeast imga={arr[1].image_url} title={arr[1].title} alt={arr[1].description} />
+         <HornedBeast imga={arr[2].image_url} title={arr[2].title} alt={arr[2].description} />
         
             </>
         )
