@@ -41,11 +41,25 @@ class App extends React.Component {
   }
 
 
+ filterBeastByHorndNumber = (e) =>{
+
+  const hornNumber = parseInt(e.target.value);
+  let filteredData = data ;
+  if(hornNumber){
+
+    filteredData =data.filter(item => item.horns === hornNumber);
+  }
+  this.setState({allBeast:filteredData})
+
+ }
+
+
+
   render(){
   return (
     <div className="App">
      <Header/>
-     <Main allBeast={this.state.allBeast} displayModal={this.displayModal}/>
+     <Main allBeast={this.state.allBeast} displayModal={this.displayModal} filterBeastByHorndNumber={this.filterBeastByHorndNumber}/>
      <SelectedBeast  show={this.state.showModel} handleClose={this.handleClose} selectedBeast={this.state.selectedBeast}/>
      <Footer/>
     </div>
